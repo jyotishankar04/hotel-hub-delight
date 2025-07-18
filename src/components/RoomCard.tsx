@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Wifi, Car, Coffee, Users, Bed } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface RoomCardProps {
   id: string;
@@ -19,6 +20,7 @@ interface RoomCardProps {
 }
 
 const RoomCard = ({ 
+  id,
   name, 
   image, 
   price, 
@@ -119,9 +121,11 @@ const RoomCard = ({
           </div>
 
           <div className="flex gap-2">
-            <Button variant="outline" className="flex-1">
+            <Link to={`/rooms/${id}`} className="flex-1">
+              <Button variant="outline" className="flex-1 w-full">
               View Details
-            </Button>
+              </Button>
+            </Link>
             <Button variant="gradient" className="flex-1">
               Book Now
             </Button>
