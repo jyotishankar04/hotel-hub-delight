@@ -14,6 +14,7 @@ const Header = () => {
     { name: "Restaurant", href: "/restaurant" },
     { name: "Events", href: "/events" },
     { name: "Facilities", href: "/facilities" },
+    { name: "Gallery", href: "/gallery" },
     { name: "About Us", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -73,9 +74,11 @@ const Header = () => {
               <Phone className="w-4 h-4 mr-2" />
               <span>+91 9000000000</span>
             </div>
-            <Button variant="gradient" size="sm">
-              Book Your Stay
-            </Button>
+            <Link to="/auth">
+              <Button variant="gradient" size="sm">
+                Sign In
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -118,9 +121,11 @@ const Header = () => {
                   <Phone className="w-4 h-4 mr-2" />
                   <span>+91 9000000000</span>
                 </div>
-                <Button variant="gradient" size="sm" className="w-full">
-                  Book Your Stay
-                </Button>
+                <Link to="/auth">
+                  <Button variant="gradient" size="sm" className="w-full">
+                    Sign In
+                  </Button>
+                </Link>
               </div>
             </div>
           </motion.div>
