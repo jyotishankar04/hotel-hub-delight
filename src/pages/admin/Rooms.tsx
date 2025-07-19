@@ -141,7 +141,7 @@ const AdminRooms = () => {
                                     <div className="mb-3 sm:mb-0">
                                         <div className="flex items-center gap-3">
                                             <h3 className="font-medium">{room.name}</h3>
-                                            <RoomStatusBadge status={room.status} />
+                                            <RoomStatusBadge status={room.status as "available" | "occupied" | "maintenance" | "reserved"} />
                                         </div>
                                         <div className="flex flex-wrap items-center gap-2 mt-2">
                                             <p className="text-sm text-muted-foreground">
